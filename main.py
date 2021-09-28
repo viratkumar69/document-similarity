@@ -142,9 +142,9 @@ def pipeline(file1, file2) -> float:
             regex_match_document1 = re.findall(data[key], content1)
             regex_match_document2 = re.findall(data[key], content2)
             if len(regex_match_document1) > 0:
-                key_pair_document1[key] = regex_match_document1[0].replace(key, "").replace(":", "")
+                key_pair_document1[key] = regex_match_document1[0].replace(key, "").replace(":", "").strip()
             if len(regex_match_document2) > 0:
-                key_pair_document2[key] =  regex_match_document2[0].replace(key, "").replace(":", "")
+                key_pair_document2[key] =  regex_match_document2[0].replace(key, "").replace(":", "").strip()
             match[key] = regex_match_document1[0] == regex_match_document2[0]
             if match[key]:
                 count_match +=1
