@@ -1,11 +1,11 @@
 
 {
-    "Name" : "Patient’s Name.*",
+    "Patient’s Name" : "Patient’s Name.*",
     "Date" :  "Date.*",
     "Disease" : "Disease.*",
-    "patients Address" : "Patient’s Address.*",
-    "Clinic/Hospital Address": "Location.*",
-    "Doctors Name" : "Consultant.*",
+    "Patient’s Address" : "Patient’s Address.*",
+    "Location": "Location.*",
+    "Consultant" : "Consultant.*",
     "Contact Number" : "Contact Number.*",
     "Patients Number" : "Patients Number.*"
 }
