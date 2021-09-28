@@ -7,5 +7,9 @@
     "Location": "Location.*",
     "Consultant" : "Consultant.*",
     "Contact Number" : "Contact Number.*",
-    "Patients Number" : "Patients Number.*"
+    "Patients Number" : "Patients Number.*",
+    "Policy Number" : "Policy Number.*",
+    "Customer ID": "Customer ID.*",
+    "Mobile" : "Mobile.*",
+    "Subject": "Subject.*"
 }
