@@ -125,8 +125,8 @@ def pipeline(filename1, filename2) -> float:
     with open('config.json', "r") as f:
         data = json.load(f)
     result= defaultdict()
-    result[filename1] = data[filename1]
-    result[filename2] = data[filename2]
+    result["file1"] = data[filename1]
+    result["file2"] = data[filename2]
     result["result"] = data[filename1+filename2]
     return dict(result)
 
