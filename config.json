@@ -12,14 +12,100 @@
     "Customer ID": "Customer ID.*",
     "Mobile" : "Mobile.*",
     "Subject": "Subject.*",
-    "file1.pdf" : {
-        "response1" : "response1"
+    "R8541722_CARE_SATHYA_SHRINIVAS_280921192546.pdf" : {
+        "Name" : {
+            "value" : "Sathya Shrinivas",
+            "status": "green"
+        }    ,
+        "Gender" : {
+            "value" : "Male",
+            "status " : "green"
+        },
+        "Age" : {
+            "value" : 54,
+            "status" : "green"
+        },
+        "MRN" : {
+            "value": "R8541722",
+            "status":"green"
+        },
+        "DATE" : {
+            "value":"08/08/2021",
+            "status" : "green"
+        },
+        "Cholesterol" : {
+            "value": "Normal",
+            "status" : "green"
+        },
+        "Thyroid" : {
+            "value" : "Normal",
+            "status" : "green"
+        },
+        "Kidney" : {
+            "value":"Normal",
+            "status" : "green"
+        },
+        "Hemoglobin" : {
+            "value" : "Normal",
+            "status" : "green"
+        },
+        "Blood calcium" : {
+            "value" : "Normal",
+            "status" : "green"
+        },
+        "Liver" : {
+            "value":"Normal",
+            "status" : "green"
+        },
+        "vitaminD" : {
+            "value" : "Low",
+            "status" : "yellow"
+        }
     },
-    "file2.pdf" : {
-        "response2" : "response2"
+    "prescription1.pdf" : {
+        "Name" : {
+            "value" : "Sathya Shrinivas",
+            "status": "green"
+        }    ,
+        "Gender" : {
+            "value" : "Male",
+            "status " : "green"
+        },
+        "Age" : {
+            "value" : 53,
+            "status" : "yellow"
+        },
+        "DATE" : {
+            "value":"07/11/2020",
+            "status" : "green"
+        },
+        "Address" : {
+            "value": "1ka, allahabad, india",
+            "status" : "green"
+        },
+        "Number" : {
+            "value" : "865656444",
+            "status" : "green"
+        },
+        "Disease" : {
+            "value":"Kidney Failure",
+            "status" : "green"
+        },
+        "Consultant" : {
+            "value" : "Ajay Singh",
+            "status" : "green"
+        },
+        "Clinic/Hospital Address" : {
+            "value" : "J-2/37, Mahavir Marg, opp. Jai Club, Panch Batti, C Scheme, Ashok Nagar, Jaipur, Rajasthan 302001",
+            "status" : "green"
+        },
+        "Consultant Mobile" : {
+            "value":"9485215647",
+            "status" : "green"
+        }
     },
-    "file1.pdffile2.pdf" : {
+    "prescription1.pdfR8541722_CARE_SATHYA_SHRINIVAS_280921192546.pdf" : {
         "flag" : true,
-        "comments" : "reason1"
+        "comments" : "Date Check Failed\nAge check Failed"
     }
 }
