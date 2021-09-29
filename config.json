@@ -62,7 +62,7 @@
             "status" : "yellow"
         }
     },
-    "prescription1.pdf" : {
+    "Prescription1.pdf" : {
         "Name" : {
             "value" : "Sathya Shrinivas",
             "status": "green"
@@ -104,7 +104,7 @@
             "status" : "green"
         }
     },
-    "prescription1.pdfR8541722_CARE_SATHYA_SHRINIVAS_280921192546.pdf" : {
+    "Prescription1.pdfR8541722_CARE_SATHYA_SHRINIVAS_280921192546.pdf" : {
         "flag" : true,
         "comments" : "Date Check Failed\nAge check Failed"
     }
