@@ -19,6 +19,7 @@
         "response2" : "response2"
     },
     "file1.pdffile2.pdf" : {
-        "response3" : "response3"
+        "flag" : "suspected",
+        "comments" : "reason1"
     }
 }
