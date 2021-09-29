@@ -140,6 +140,7 @@ app.config['MAX_CONTENT_PATH'] = 999999999
 def upload_file():
     filename1 = request.files['file1'].filename.strip()
     filename2 = request.files['file2'].filename.strip()
+    print((filename1, filename2))
     result = pipeline(filename1, filename2)
 
     return jsonify(result)
