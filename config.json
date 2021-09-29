@@ -72,11 +72,11 @@
             "status " : "green"
         },
         "Age" : {
-            "value" : 53,
-            "status" : "yellow"
+            "value" : 54,
+            "status" : "green"
         },
         "DATE" : {
-            "value":"07/11/2020",
+            "value":"15/08/2021",
             "status" : "green"
         },
         "Address" : {
@@ -106,6 +106,6 @@
     },
     "Prescription1.pdfR8541722_CARE_SATHYA_SHRINIVAS_280921192546.pdf" : {
         "flag" : true,
-        "comments" : "Date Check Failed\nAge check Failed"
+        "comments" : "Kidney normal on 08/08/2021\nKidney abnormal on 15/08/2021\nDiseases development time abnormal"
     }
 }
