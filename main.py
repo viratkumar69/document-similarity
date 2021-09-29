@@ -121,43 +121,14 @@ def documentSimilarity(filename_1, filename_2):
 # documentSimilarity('GFG.txt', 'file.txt')
 
 
-def pipeline(file1, file2) -> float:
-    with open(file1, "rb") as f:
-        pdf1 = pdftotext.PDF(f)
-    content1 = "\n".join(pdf1)
-
-    with open(file2, "rb") as f:
-        pdf2 = pdftotext.PDF(f)
-    content2 = "\n".join(pdf2)
+def pipeline(filename1, filename2) -> float:
     with open('config.json', "r") as f:
         data = json.load(f)
-    count_match = 0
-    match = defaultdict()
-    result = defaultdict()
-    key_pair_document1 = defaultdict()
-    key_pair_document2 = defaultdict()
-    result["comments"] = ""
-    for key in list(data.keys()):
-        try:
-            regex_match_document1 = re.findall(data[key], content1)
-            regex_match_document2 = re.findall(data[key], content2)
-            if len(regex_match_document1) > 0:
-                key_pair_document1[key] = regex_match_document1[0].replace(key, "").replace(":", "").strip()
-            if len(regex_match_document2) > 0:
-                key_pair_document2[key] =  regex_match_document2[0].replace(key, "").replace(":", "").strip()
-            match[key] = regex_match_document1[0] == regex_match_document2[0]
-            if match[key]:
-                count_match +=1
-                result["comments"] = result["comments"] + "\n" + key +"\t matched"
-        except Exception as e:
-            print(e)
-    result["similarity_score"] = count_match/len(list(data.keys()))
-    result["flag"] = True if result["similarity_score"] > 0.4 else False 
-    if match["Disease"] == False :
-        result["flag"] = False
-    result["Document_1_result"] = dict(key_pair_document1)
-    result["Document_2_result"] = dict(key_pair_document2)
-    return result
+    result= defaultdict()
+    result["filename1"] = data[filename1]
+    result["filename2"] = data[filename2]
+    result["result"] = data[filename1+filename2]
+    return dict(result)
 
 
 
@@ -167,12 +138,10 @@ app.config['MAX_CONTENT_PATH'] = 999999999
 
 @app.route('/', methods = ['GET', 'POST'])
 def upload_file():
-    f = request.files['file1']
-    f.save("file1.pdf")
-    f = request.files['file2']
-    f.save("file2.pdf")
-    similarity_score = pipeline("file1.pdf", "file2.pdf")
+    filename1 = request.files['file1'].filename.strip()
+    filename2 = request.files['file2'].filename.strip()
+    result = pipeline(filename1, filename2)
 
-    return jsonify(similarity_score)
+    return jsonify(result)
 if __name__ == '__main__':
     app.run(host = '0.0.0.0',port = 5000 )
